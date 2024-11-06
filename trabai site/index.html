@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Venda de Carros</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>Venda de Carros</h1>
+        </div>
+        <div class="carrinho-container">
+            <button id="showCarrinho" onclick="toggleCarrinho()">Carrinho (0)</button>
+        </div>
+    </header>
+
+    <main>
+        <section id="carros">
+            <h2>Carros Disponíveis</h2>
+            <div class="carro" id="carro1">
+                <img src="https://lartbr.com.br/wp-content/webp-express/webp-images/uploads/2024/09/IMG_7727.jpeg.webp" alt="Fiat Uno">
+                <h3>Fiat Uno</h3>
+                <p class="preco">R$ 30.000</p>
+                <button onclick="adicionarCarrinho('Fiat Uno', 30000, 'https://lartbr.com.br/wp-content/webp-express/webp-images/uploads/2024/09/IMG_7727.jpeg.webp')">Adicionar ao Carrinho</button>
+                <div class="detalhes">
+                    <p><strong>Detalhes:</strong> Compacto e econômico, perfeito para cidade.</p>
+                </div>
+            </div>
+
+            <div class="carro" id="carro2">
+                <img src="https://quatrorodas.abril.com.br/wp-content/uploads/2018/01/vw-fox.jpg?crop=1&resize=1212,909" alt="Volkswagen Fox">
+                <h3>Volkswagen Fox</h3>
+                <p class="preco">R$ 35.000</p>
+                <button onclick="adicionarCarrinho('Volkswagen Fox', 35000, 'https://quatrorodas.abril.com.br/wp-content/uploads/2018/01/vw-fox.jpg?crop=1&resize=1212,909')">Adicionar ao Carrinho</button>
+                <div class="detalhes">
+                    <p><strong>Detalhes:</strong> Carro Impecavel, UNICO DONO, 187 Mil KM, Motor nao bate.</p>
+                </div>
+            </div>
+
+            <div class="carro" id="carro3">
+                <img src="https://static.wikia.nocookie.net/automobile/images/e/e9/Chevrolet_Corsica.jpg/revision/latest/scale-to-width-down/300?cb=20100528060935" alt="Chevrolet Corsica">
+                <h3>Chevrolet Corsica</h3>
+                <p class="preco">R$ 45.000</p>
+                <button onclick="adicionarCarrinho('Chevrolet Corsica', 45000, 'https://static.wikia.nocookie.net/automobile/images/e/e9/Chevrolet_Corsica.jpg/revision/latest/scale-to-width-down/300?cb=20100528060935')">Adicionar ao Carrinho</button>
+                <div class="detalhes">
+                    <p><strong>Detalhes:</strong> Tecnologia avançada, conforto e segurança.</p>
+                </div>
+            </div>
+
+            <div class="carro" id="carro4">
+                <img src ="https://storage.googleapis.com/dealersites-content/dealersites/vehicles/models/hyundai/foto730_39137.webp" alt = "hb20"
+                <h3>Hyundai HB20 2020 </h3>
+                <P class="preco">R$ 65.000</P>
+                <button onclick="adicionarCarrinho('Hyundai HB20 2020', 65000,'https://storage.googleapis.com/dealersites-content/dealersites/vehicles/models/hyundai/foto730_39137.webp' )">adicionarCarrinho</button>
+                <div class="detalhes">
+                    <p><strong> Detalhes:</strong> Cambio automatico, 78 mil km, segundo dono</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="carrinho" class="carrinho-conteudo">
+            <h2>Seu Carrinho</h2>
+            <ul id="listaCarrinho"></ul>
+            <p id="totalCarrinho">Total: R$ 0,00</p>
+            <button onclick="finalizarCompra()">Finalizar Compra</button>
+            <button onclick="toggleCarrinho()">Fechar Carrinho</button>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Venda de Carros</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
